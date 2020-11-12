@@ -14,23 +14,6 @@ void mainchoie()
 	
 }
 
-void mainchoie_2(int withdraw,int save)
-{
-	save -= withdraw;
-
-	if (save >= 0)
-	{
-		printf("\t%s : %d\n", choie(4), save);
-	}
-
-	if (save < 0)
-	{
-		save = save + withdraw;
-		printf("\tNot enought\n");
-		printf("\t%s : %d\n", choie(4), save);
-	}
-}
-
 void main1()
 {
 	struct BankMy
@@ -43,6 +26,7 @@ void main1()
 
 	int money = 0;
 	int c = 0;
+
 	do
 	{
 		printf("\n");
@@ -66,7 +50,20 @@ void main1()
 			{
 				printf("\n\t%s : ", choie(3));
 				scanf_s("%d", &infomation.withdrawMoney);
-				mainchoie_2(infomation.withdrawMoney, money);
+				money -= infomation.withdrawMoney;
+
+				if (money >= 0)
+				{
+					printf("\t%s : %d\n", choie(4), money);
+				}
+
+				if (money < 0)
+				{
+					money += infomation.withdrawMoney;
+					printf("\tNot enought\n");
+					printf("\t%s : %d\n", choie(4), money);
+				}
+				
 			}
 		}
 		c++;
