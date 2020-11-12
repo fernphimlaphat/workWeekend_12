@@ -38,10 +38,12 @@ void main1()
 			printf("\n\t%s : ", choie(3));
 			scanf_s("%d", &infomation.saveMoney);
 
+			if (infomation.saveMoney > 0 && infomation.saveMoney <= 1000000)
+			{
 				money += infomation.saveMoney;
 
 				printf("\t%s : %d\n", choie(4), money);
-			
+			}
 		}
 
 		if (infomation.select == 2)
