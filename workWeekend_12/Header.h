@@ -14,11 +14,6 @@ void mainchoie()
 	
 }
 
-void mainchoie_1(int save)
-{
-	
-}
-
 void mainchoie_2(int withdraw,int save)
 {
 	save -= withdraw;
